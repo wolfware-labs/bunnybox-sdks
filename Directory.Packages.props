@@ -2,6 +2,6 @@
   <ItemGroup>
     <PackageVersion Include="Fluid.Core" Version="2.24.0" />
     <PackageVersion Include="MediatR" Version="12.5.0" />
-    <PackageVersion Include="Wolfware.BunnyBox.Sdk.NodeJs" Version="1.0.0-next.13" />
+    <PackageVersion Include="Wolfware.BunnyBox.Sdk.NodeJs" Version="1.0.0-next.17" />
   </ItemGroup>
 </Project>
