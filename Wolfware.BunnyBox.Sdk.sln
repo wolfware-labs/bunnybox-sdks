@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4D91B1F5-68E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wolfware.BunnyBox.Sdk.Angular", "src\Wolfware.BunnyBox.Sdk.Angular\Wolfware.BunnyBox.Sdk.Angular.csproj", "{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wolfware.BunnyBox.Sdk.React", "src\Wolfware.BunnyBox.Sdk.React\Wolfware.BunnyBox.Sdk.React.csproj", "{C3E8DED9-2555-43E9-9D52-4104543F7BD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wolfware.BunnyBox.Sdk.Vue", "src\Wolfware.BunnyBox.Sdk.Vue\Wolfware.BunnyBox.Sdk.Vue.csproj", "{D0C30639-0E49-4B24-8724-B003CF33BAC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +23,21 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308} = {4D91B1F5-68EF-4268-BCF3-612F84D6409A}
+		{C3E8DED9-2555-43E9-9D52-4104543F7BD2} = {4D91B1F5-68EF-4268-BCF3-612F84D6409A}
+		{D0C30639-0E49-4B24-8724-B003CF33BAC1} = {4D91B1F5-68EF-4268-BCF3-612F84D6409A}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3E8DED9-2555-43E9-9D52-4104543F7BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3E8DED9-2555-43E9-9D52-4104543F7BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3E8DED9-2555-43E9-9D52-4104543F7BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3E8DED9-2555-43E9-9D52-4104543F7BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0C30639-0E49-4B24-8724-B003CF33BAC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C30639-0E49-4B24-8724-B003CF33BAC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C30639-0E49-4B24-8724-B003CF33BAC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C30639-0E49-4B24-8724-B003CF33BAC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
