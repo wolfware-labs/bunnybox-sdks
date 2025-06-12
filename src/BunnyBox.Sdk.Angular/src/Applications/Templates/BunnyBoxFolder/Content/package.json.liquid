@@ -1,0 +1,26 @@
+{
+    "name": "{{ application.name }}",
+    "version": "{{ application.version }}",
+    "description": "{{ application.description }}",
+    "main": "index.js",
+    "keywords": [],
+    "author": "{{ application.author }}",
+    "license": "{{ application.license }}",
+    "devDependencies": {
+        "@angular-devkit/build-angular": "^19.2.6",
+        "typescript": "~5.7.2"
+        {% for dependency in application.devDependencies %}
+        ,"{{ dependency.name }}": "{{ dependency.version }}"
+        {% endfor %}
+    },
+    "dependencies": {
+        "@angular/core": "^19.2.0",
+        "@angular/platform-browser": "^19.2.5",
+        "@angular/router": "^19.2.5",
+        "rxjs": "~7.8.0",
+        "zone.js": "~0.15.0"
+        {% for dependency in application.dependencies %}
+        ,"{{ dependency.name }}": "{{ dependency.version }}"
+        {% endfor %}
+    }
+}

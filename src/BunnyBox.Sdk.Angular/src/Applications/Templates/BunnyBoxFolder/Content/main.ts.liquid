@@ -1,0 +1,31 @@
+﻿import {bootstrapApplication} from '@angular/platform-browser';
+import {ApplicationConfig, Component, provideZoneChangeDetection} from '@angular/core';
+import {provideRouter, RouterOutlet, withComponentInputBinding } from '@angular/router';
+
+const routes = [
+    {% for route in routes %}
+  {
+    path: '{{ route.logicalPath }}',
+    loadComponent: () => import('{{ route.physicalPath }}').then(m => m.{{ route.component }})
+  },
+    {% endfor %}
+];
+
+const appConfig: ApplicationConfig = {
+  providers: [
+    provideZoneChangeDetection({eventCoalescing: true}),
+    provideRouter(routes,withComponentInputBinding())
+  ]
+};
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  template: `<router-outlet />`,
+  styles: [],
+})
+export class AppComponent {
+}
+
+
+bootstrapApplication(AppComponent, appConfig).catch((err) => console.error(err));

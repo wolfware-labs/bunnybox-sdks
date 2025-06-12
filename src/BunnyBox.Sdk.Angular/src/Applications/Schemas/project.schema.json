@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ApplicationProject",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "description": "The metadata of the application project.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the application project."
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "A short description of the application project."
+        },
+        "version": {
+          "type": "string",
+          "description": "The version of the application project."
+        },
+        "author": {
+          "type": "string",
+          "description": "The version of the application project."
+        }
+      }
+    }
+  },
+  "required": [
+    "metadata"
+  ],
+  "additionalProperties": false
+}

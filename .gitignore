@@ -1,0 +1,9 @@
+.idea
+obj
+bin
+*.user
+.nx
+node_modules
+/services/Morauth/Presentation/Morauth.API/certs
+.angular
+dist

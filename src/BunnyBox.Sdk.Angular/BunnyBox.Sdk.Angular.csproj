@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="src\Interop\Scripts\**\*.*"/>
+  </ItemGroup>
+
+  <!-- Application Resources -->
+  <ItemGroup>
+    <EmbeddedResource Include="src\Applications\Schemas\**\*.*"/>
+    <None Remove="src\Applications\Templates\BunnyBoxFolder\Content\**\*.*"/>
+    <EmbeddedResource
+      Include="src\Applications\Templates\BunnyBoxFolder\Content\**\*.*"
+      Exclude="src\Applications\Templates\BunnyBoxFolder\Content\main.ts.liquid"
+      LogicalName="ApplicationFolderTemplate_%(RecursiveDir)%(Filename)%(Extension)"
+    >
+      <WithCulture>false</WithCulture>
+    </EmbeddedResource>
+    <EmbeddedResource
+      Include="src\Applications\Templates\BunnyBoxFolder\Content\main.ts.liquid"
+      LogicalName="ApplicationMainTemplate_%(RecursiveDir)%(Filename)%(Extension)"
+    >
+      <WithCulture>false</WithCulture>
+    </EmbeddedResource>
+    <None Remove="src\Applications\Templates\Project\Content\**\*.*"/>
+    <EmbeddedResource
+      Include="src\Applications\Templates\Project\Content\**\*.*"
+      LogicalName="ApplicationProjectTemplate_%(RecursiveDir)%(Filename)%(Extension)"
+    >
+      <WithCulture>false</WithCulture>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <!-- MicroFrontend Resources -->
+  <ItemGroup>
+    <EmbeddedResource Include="src\MicroFrontends\Schemas\**\*.*"/>
+    <None Remove="src\MicroFrontends\Templates\BunnyBoxFolder\Content\**\*.*"/>
+    <EmbeddedResource
+      Include="src\MicroFrontends\Templates\BunnyBoxFolder\Content\**\*.*"
+      LogicalName="MicroFrontendFolderTemplate_%(RecursiveDir)%(Filename)%(Extension)"
+    >
+      <WithCulture>false</WithCulture>
+    </EmbeddedResource>
+    <None Remove="src\MicroFrontends\Templates\Project\Content\**\*.*"/>
+    <EmbeddedResource
+      Include="src\MicroFrontends\Templates\Project\Content\**\*.*"
+      LogicalName="MicroFrontendProjectTemplate_%(RecursiveDir)%(Filename)%(Extension)"
+    >
+      <WithCulture>false</WithCulture>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Target Name="ShowEmbeddedResources" AfterTargets="Compile">
+    <Message Importance="High" Text="RES: %(EmbeddedResource.Identity) → %(EmbeddedResource.LogicalName)"/>
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="Fluid.Core"/>
+    <PackageReference Include="MediatR"/>
+    <PackageReference Include="Wolfware.BunnyBox.Sdk.NodeJs" />
+  </ItemGroup>
+</Project>

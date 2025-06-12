@@ -1,0 +1,49 @@
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  background-color: #0e0e10;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(
+                  ellipse at 50% 20%,
+                  rgba(110, 90, 160, 0.05) 0%,
+                  rgba(14, 14, 16, 0.9) 60%,
+                  #0e0e10 100%
+  );
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eaeaf0;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: radial-gradient(
+                    ellipse at 50% 20%,
+                    rgba(180, 160, 230, 0.2) 0%,
+                    rgba(255, 255, 255, 0.95) 60%,
+                    #fafafa 100%
+    );
+    color: #1a1a1a;
+  }
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAb0lEQVR42u3OsQkAIBDDsMZ/N1bgBDasE6tpQwjtkJHNT+cpnM3FxeXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5ef3/AwDceP9RZTOHeQAAAABJRU5ErkJggg==');
+  background-repeat: repeat;
+  opacity: 0.025;
+  z-index: 1;
+  pointer-events: none;
+}

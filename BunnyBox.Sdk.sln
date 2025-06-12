@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{8699B93A-E3A9-490E-AEB7-1421DE6EEF47}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4D91B1F5-68EF-4268-BCF3-612F84D6409A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BunnyBox.Sdk.Angular", "src\BunnyBox.Sdk.Angular\BunnyBox.Sdk.Angular.csproj", "{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308} = {4D91B1F5-68EF-4268-BCF3-612F84D6409A}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86C4443-C9AB-4FDA-BCB0-39ED1F4A0308}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,7 @@
+﻿FROM angular:{{sdkVersion}} as Application
+
+WITH metadata
+    name: {{project.name}}
+    version: {{project.version}}
+    description: {{project.description}}
+    author: {{project.author}}
